@@ -35,10 +35,10 @@
                         <td>
                             <select id="operation" required>
                                 <option value="" hidden>Selecciona una operación</option>
-                                <option value="sum" class="add">Sumar +</option>
-                                <option value="sub" class="sub">Restar -</option>
-                                <option value="mult" class="mult">Multiplicar *</option>
-                                <option value="div" class="div">Dividir /</option>
+                                <option value="1" class="add">Sumar +</option>
+                                <option value="2" class="sub">Restar -</option>
+                                <option value="3" class="mult">Multiplicar *</option>
+                                <option value="4" class="div">Dividir /</option>
                             </select>
                         </td>
                     </tr>
@@ -48,7 +48,7 @@
                             <label for="number2" required>Ingresa otro número: </label>
                         </td>
                         <td>
-                            <input type="text" type="text" pattern="[0-9]*" title="Por favor ingresa sólo números" name="number2" placeholder="Ingresa un número" />
+                            <input id="number2" name="number2" type="text" pattern="[0-9]*" title="Por favor ingresa sólo números" placeholder="Ingresa un número" />
                         </td>
                     </tr>
                 </form>
@@ -59,13 +59,12 @@
             <p>¿Desea hacer otra operación?</p>
             <div>
                 <button type="button" id="si">Sí</button>
-                <button type="button" id="no" onclick="operation()">No</button>
+                <button type="button" id="no" onclick="oper()">No</button>
             </div>
         </form>
         
-        <div>
-        
-        </div>
+        <div id="answer"></div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
