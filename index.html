@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+    <div id="container" align="center">
+            <div id="calculator">
+                <table>
+                <form>
+                    <tr>
+                        <td>
+                            <label for="name">Nombre: </label>
+                        </td>
+                        <td>
+                            <input id="name" name="name" type="text" pattern="[^0-9]*" title="Por favor ingresa sólo letras" placeholder="Ingresa tu nombre" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="number1">Ingresa un número: </label>
+                        </td>
+                        <td>
+                            <input id="number1" name="number1" type="text" pattern="[0-9]*" title="Por favor ingresa sólo números" placeholder="Ingresa un número" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <select id="operation" required>
+                                <option value="" hidden>Selecciona una operación</option>
+                                <option value="sum" class="add">Sumar +</option>
+                                <option value="sub" class="sub">Restar -</option>
+                                <option value="mult" class="mult">Multiplicar *</option>
+                                <option value="div" class="div">Dividir /</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="number2" required>Ingresa otro número: </label>
+                        </td>
+                        <td>
+                            <input type="text" type="text" pattern="[0-9]*" title="Por favor ingresa sólo números" name="number2" placeholder="Ingresa un número" />
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        
+        <form id="round-2">
+            <p>¿Desea hacer otra operación?</p>
+            <div>
+                <button type="button" id="si">Sí</button>
+                <button type="button" id="no" onclick="operation()">No</button>
+            </div>
+        </form>
+        
+        <div>
+        
+        </div>
+</body>
+
+</html>
