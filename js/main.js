@@ -31,7 +31,7 @@ function oper(operation) {
         return result;
     }
     
-    switch (operation) {  /*error en el switch*/
+    switch (operation) {
     case ("1"):
         alert("suma");
         /*sum();
