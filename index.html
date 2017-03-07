@@ -12,7 +12,7 @@
     <div id="container" align="center">
             <div id="calculator">
                 <table>
-                <form>
+                <form id="round-2">
                     <tr>
                         <td>
                             <label for="name">Nombre: </label>
@@ -33,8 +33,11 @@
 
                     <tr>
                         <td>
-                            <select id="operation" required>
-                                <option value="" hidden>Selecciona una operación</option>
+                            <label for="operation">Selecciona una operación: </label>
+                        </td>
+                        <td>
+                            <select id="operation" name="operation" required>
+                                <option value="" hidden>Selecciona</option>
                                 <option value="1" class="add">Sumar +</option>
                                 <option value="2" class="sub">Restar -</option>
                                 <option value="3" class="mult">Multiplicar *</option>
@@ -53,15 +56,10 @@
                     </tr>
                 </form>
             </table>
-        </div>
-        
-        <form id="round-2">
             <p>¿Desea hacer otra operación?</p>
-            <div>
-                <button type="button" id="si">Sí</button>
-                <button type="button" id="no" onclick="oper()">No</button>
-            </div>
-        </form>
+                <button type="submit" id="si">Sí</button>
+                <button type="submit" id="no">No</button>
+        </div>
         
     <div id="answer"></div>
     <script type="text/javascript" src="js/main.js"></script>

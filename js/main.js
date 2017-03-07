@@ -1,72 +1,51 @@
 /*jslint eqeq: true*/
-/*global window, document, alert*/
-var nombre = document.getElementById("name").value,
-    number1 = document.getElementById("number1").value,
-    number2 = document.getElementById("number2").value,
-    operation = document.getElementById("operation").value,
-    result = document.getElementById("answer"),
+/*global window, document, alert, sum, sub, mult, div*/
+var operation,
+    result,
     si = document.getElementById("si"),
-    no = document.getElementById("no");
+    no = document.getElementById("no"),
+    nombre,
+    num1,
+    num2;
 
-function oper(operation) {
+function oper() {
     "use strict";
-    function sum(number1, number2) {
-        result = parseInt((number1), 10) + parseInt((number2), 10);
-        return result;
-    }
-
-    function sub(number1, number2) {
-        
-        result = parseInt((number1), 10) - parseInt((number2), 10);
-        return result;
-    }
-
-    function mult(number1, number2) {
-        result = parseInt((number1), 10) * parseInt((number2), 10);
-        return result;
-    }
-
-    function div(number1, number2) {
-        result = parseInt((number1), 10) / parseInt((number2), 10);
-        return result;
-    }
-    
     switch (operation) {
-    case ("1"):
-        alert("suma");
-        /*sum();
-        result.innerHTML = name + "!<br>La suma de " + number1 + " y " + number2 + " es = " + suma;*/
+    case 1:
+        var r = num1 + num2;
+        result.innerHTML = "<span class='results'> Hola " + nombre + ",<br>La suma entre " + num1 + " y " + num2 + " es " + r + "<span>";
         break;
-    
-    case ("2"):
-        alert("resta");
-        /*sub();
-        result.innerHTML = name + "!<br>La resta de " + number1 + " y " + number2 + " es = " + resta;*/
+
+    case 2:
+        r = num1 - num2;
+        result.innerHTML = "<span class='results'>Hola " + nombre + ",<br>La resta entre " + num1 + " y " + num2 + " es " + r + "<span>";
         break;
-            
-    case ("3"):
-        alert("mult");
-        /*mult();
-        result.innerHTML = name + "!<br>La multiplicación de " + number1 + " y " + number2 + " es = " + multiplicacion;*/
+
+    case 3:
+        r = num1 * num2;
+        result.innerHTML = "<span class='results'>Hola " + nombre + ",<br>La multiplicación entre " + num1 + " y " + num2 + " es " + r + "<span>";
         break;
-    
-    case ("4"):
-        alert("division");
-        /*
-        div();
-        result.innerHTML = name + "!<br>La división de " + number1 + " y " + number2 + " es = " + division;*/
+
+    case 4:
+        r = num1 / num2;
+        result.innerHTML = "<span class='results'>Hola " + nombre + ",<br>La división entre " + num1 + " y " + num2 + " es " + r + "<span>";
         break;
-            
+
     default:
-        alert(nombre);
+        result.innerHTML = "Si no ingresas un número no se puede hacer una operación :o";
     }
 }
 
 no.addEventListener("click", function () {
     "use strict";
+    nombre = document.getElementById("name").value;
+    num1 = parseInt((document.getElementById("number1").value), 10);
+    num2 = parseInt((document.getElementById("number2").value), 10);
+    operation = parseFloat(document.getElementById("operation").value);
+    result = document.getElementById("answer");
     oper();
 });
-
+/*
 si.addEventListener("click", function () {
     "use strict";
-});
+});*/
